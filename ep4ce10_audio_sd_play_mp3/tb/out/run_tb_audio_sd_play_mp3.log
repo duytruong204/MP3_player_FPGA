@@ -1,0 +1,724 @@
+Command: /remote/us01sgnfs01239/workspace/duchy/MUSIC/ep4ce10_audio_sd_play_mp3/tb/build/simv_tb_audio_sd_play_mp3 +FRAMES=44100 -l /remote/us01sgnfs01239/workspace/duchy/MUSIC/ep4ce10_audio_sd_play_mp3/tb/out/run_tb_audio_sd_play_mp3.log
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP2-10_Full64; Runtime version V-2023.12-SP2-10_Full64;  Oct 15 17:19 2026
+MP3 file loaded: 4139884 bytes, placed at sector 8832, MP3_SECTOR=8086
+2596540000 SD init done, ACMD41 polls = 3
+2951980000 WM8978 configured (15 I2C register writes)
+*************************************************************frame:    0
+framesize:  417
+main_data_begin =   0, br_count =    0
+==================decoding gr0 ch0 fr   1
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   1
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   1
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   1
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    1
+framesize:  417
+main_data_begin =   0, br_count =  381
+==================decoding gr0 ch0 fr   2
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   2
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   2
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   2
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    2
+framesize:  418
+main_data_begin = 230, br_count =  511
+==================decoding gr0 ch0 fr   3
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   3
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   3
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   3
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    3
+framesize:  418
+main_data_begin = 442, br_count =  442
+==================decoding gr0 ch0 fr   4
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   4
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   4
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   4
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    4
+framesize:  418
+main_data_begin = 506, br_count =  506
+==================decoding gr0 ch0 fr   5
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   5
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   5
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   5
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    5
+framesize:  418
+main_data_begin = 251, br_count =  251
+==================decoding gr0 ch0 fr   6
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   6
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   6
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   6
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    6
+framesize:  418
+main_data_begin =  24, br_count =   24
+==================decoding gr0 ch0 fr   7
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   7
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   7
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   7
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    7
+framesize:  418
+main_data_begin =  29, br_count =   29
+==================decoding gr0 ch0 fr   8
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   8
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   8
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   8
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    8
+framesize:  418
+main_data_begin =  24, br_count =   24
+==================decoding gr0 ch0 fr   9
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr   9
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr   9
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr   9
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:    9
+framesize:  418
+main_data_begin =  30, br_count =   30
+==================decoding gr0 ch0 fr  10
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  10
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  10
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  10
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   10
+framesize:  418
+main_data_begin =  30, br_count =   30
+==================decoding gr0 ch0 fr  11
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  11
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  11
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  11
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   11
+framesize:  418
+main_data_begin =  72, br_count =   72
+==================decoding gr0 ch0 fr  12
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  12
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  12
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  12
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   12
+framesize:  418
+main_data_begin = 124, br_count =  124
+==================decoding gr0 ch0 fr  13
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  13
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  13
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  13
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   13
+framesize:  418
+main_data_begin = 185, br_count =  185
+==================decoding gr0 ch0 fr  14
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  14
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  14
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  14
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   14
+framesize:  418
+main_data_begin = 233, br_count =  233
+==================decoding gr0 ch0 fr  15
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  15
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  15
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  15
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   15
+framesize:  418
+main_data_begin = 284, br_count =  284
+==================decoding gr0 ch0 fr  16
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  16
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  16
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  16
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   16
+framesize:  418
+main_data_begin = 333, br_count =  333
+==================decoding gr0 ch0 fr  17
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  17
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  17
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  17
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   17
+framesize:  418
+main_data_begin = 387, br_count =  387
+==================decoding gr0 ch0 fr  18
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  18
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  18
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  18
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   18
+framesize:  418
+main_data_begin = 436, br_count =  436
+==================decoding gr0 ch0 fr  19
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  19
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  19
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  19
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   19
+framesize:  418
+main_data_begin = 471, br_count =  471
+==================decoding gr0 ch0 fr  20
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  20
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  20
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  20
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   20
+framesize:  418
+main_data_begin = 457, br_count =  457
+==================decoding gr0 ch0 fr  21
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  21
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  21
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  21
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   21
+framesize:  418
+main_data_begin = 387, br_count =  387
+==================decoding gr0 ch0 fr  22
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  22
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  22
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  22
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   22
+framesize:  418
+main_data_begin = 272, br_count =  272
+==================decoding gr0 ch0 fr  23
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  23
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  23
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  23
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   23
+framesize:  418
+main_data_begin = 162, br_count =  162
+==================decoding gr0 ch0 fr  24
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  24
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  24
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  24
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   24
+framesize:  418
+main_data_begin = 121, br_count =  121
+==================decoding gr0 ch0 fr  25
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  25
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  25
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  25
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   25
+framesize:  418
+main_data_begin = 156, br_count =  156
+==================decoding gr0 ch0 fr  26
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  26
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  26
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  26
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   26
+framesize:  417
+main_data_begin = 186, br_count =  186
+==================decoding gr0 ch0 fr  27
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  27
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  27
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  27
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   27
+framesize:  418
+main_data_begin =  34, br_count =   34
+==================decoding gr0 ch0 fr  28
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  28
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  28
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  28
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   28
+framesize:  418
+main_data_begin =  52, br_count =   52
+==================decoding gr0 ch0 fr  29
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  29
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  29
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  29
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   29
+framesize:  418
+main_data_begin =  69, br_count =   69
+==================decoding gr0 ch0 fr  30
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  30
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  30
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  30
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   30
+framesize:  418
+main_data_begin = 115, br_count =  115
+==================decoding gr0 ch0 fr  31
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  31
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  31
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  31
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   31
+framesize:  418
+main_data_begin = 158, br_count =  158
+==================decoding gr0 ch0 fr  32
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  32
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  32
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  32
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   32
+framesize:  418
+main_data_begin = 206, br_count =  206
+==================decoding gr0 ch0 fr  33
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  33
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  33
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  33
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   33
+framesize:  418
+main_data_begin = 261, br_count =  261
+==================decoding gr0 ch0 fr  34
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  34
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  34
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  34
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   34
+framesize:  418
+main_data_begin = 312, br_count =  312
+==================decoding gr0 ch0 fr  35
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  35
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  35
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  35
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   35
+framesize:  418
+main_data_begin = 369, br_count =  369
+==================decoding gr0 ch0 fr  36
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  36
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  36
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  36
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   36
+framesize:  418
+main_data_begin = 423, br_count =  423
+==================decoding gr0 ch0 fr  37
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  37
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  37
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  37
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+*************************************************************frame:   37
+framesize:  418
+main_data_begin = 471, br_count =  471
+==================decoding gr0 ch0 fr  38
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr0 ch1 fr  38
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch0 fr  38
+...end of big_values decoding
+...end of part2_3_length
+... end of granule
+==================decoding gr1 ch1 fr  38
+999956224000 captured 44100 frames, SD CMD17 count = 34, first sector = 8832
+granule starts: 74, underruns: 0, huffman half-requests: 17
+TB-PASS (compare PCM with tools/compare_pcm.py)
+$finish called from file "/remote/us01sgnfs01239/workspace/duchy/MUSIC/ep4ce10_audio_sd_play_mp3/tb/tb_audio_sd_play_mp3.sv", line 220.
+$finish at simulation time         999956224146
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 999956224146 ps
+CPU Time:    130.830 seconds;       Data structure size:   9.8Mb
+Thu Oct 15 17:21:33 2026

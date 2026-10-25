@@ -1,0 +1,118 @@
+
+State Machine - |audio_sd_play_mp3|wm8978_ctrl:wm8978_ctrl_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|state
+Name state.STOP state.N_ACK state.RD_DATA state.ACK_5 state.SEND_RD_ADDR state.START_2 state.ACK_4 state.WR_DATA state.ACK_3 state.SEND_B_ADDR_L state.ACK_2 state.SEND_B_ADDR_H state.ACK_1 state.SEND_D_ADDR state.START_1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.START_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.SEND_D_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ACK_1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.SEND_B_ADDR_H 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ACK_2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.SEND_B_ADDR_L 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ACK_3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WR_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ACK_4 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.START_2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.SEND_RD_ADDR 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ACK_5 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RD_DATA 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.N_ACK 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STOP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|NIOS_state
+Name NIOS_state.011 NIOS_state.010 NIOS_state.001 NIOS_state.000 NIOS_state.100 
+NIOS_state.000 0 0 0 0 0 
+NIOS_state.001 0 0 1 1 0 
+NIOS_state.010 0 1 0 1 0 
+NIOS_state.011 1 0 0 1 0 
+NIOS_state.100 0 0 0 1 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|MAC_state
+Name MAC_state.00 MAC_state.10 MAC_state.01 
+MAC_state.00 0 0 0 
+MAC_state.01 1 0 1 
+MAC_state.10 1 1 0 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|mac_unit:MAC_module|CH1_state
+Name CH1_state.1101 CH1_state.1001 CH1_state.1000 CH1_state.0111 CH1_state.0110 CH1_state.0101 CH1_state.0100 CH1_state.0011 CH1_state.0010 CH1_state.0001 CH1_state.0000 
+CH1_state.0000 0 0 0 0 0 0 0 0 0 0 0 
+CH1_state.0001 0 0 0 0 0 0 0 0 0 1 1 
+CH1_state.0010 0 0 0 0 0 0 0 0 1 0 1 
+CH1_state.0011 0 0 0 0 0 0 0 1 0 0 1 
+CH1_state.0100 0 0 0 0 0 0 1 0 0 0 1 
+CH1_state.0101 0 0 0 0 0 1 0 0 0 0 1 
+CH1_state.0110 0 0 0 0 1 0 0 0 0 0 1 
+CH1_state.0111 0 0 0 1 0 0 0 0 0 0 1 
+CH1_state.1000 0 0 1 0 0 0 0 0 0 0 1 
+CH1_state.1001 0 1 0 0 0 0 0 0 0 0 1 
+CH1_state.1101 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|mac_unit:MAC_module|CH0_state
+Name CH0_state.1101 CH0_state.1100 CH0_state.1011 CH0_state.1010 CH0_state.1001 CH0_state.1000 CH0_state.0111 CH0_state.0110 CH0_state.0101 CH0_state.0100 CH0_state.0011 CH0_state.0010 CH0_state.0001 CH0_state.0000 
+CH0_state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+CH0_state.0001 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+CH0_state.0010 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+CH0_state.0011 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+CH0_state.0100 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+CH0_state.0101 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+CH0_state.0110 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+CH0_state.0111 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+CH0_state.1000 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+CH0_state.1001 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+CH0_state.1010 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+CH0_state.1011 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+CH0_state.1100 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+CH0_state.1101 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|huffctl:HUFFMANDECODER|decodestage
+Name decodestage.00 decodestage.10 decodestage.01 
+decodestage.00 0 0 0 
+decodestage.01 1 0 1 
+decodestage.10 1 1 0 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|huffctl:HUFFMANDECODER|stage
+Name stage.101 stage.100 stage.011 stage.010 stage.001 stage.000 
+stage.000 0 0 0 0 0 0 
+stage.001 0 0 0 0 1 1 
+stage.010 0 0 0 1 0 1 
+stage.011 0 0 1 0 0 1 
+stage.100 0 1 0 0 0 1 
+stage.101 1 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_feeder:mp3_feeder_inst|state
+Name state.S_RESTART state.S_DONE state.S_ZERO state.S_RD_BUSY state.S_RD_CMD state.S_IDLE 
+state.S_IDLE 0 0 0 0 0 0 
+state.S_RD_CMD 0 0 0 0 1 1 
+state.S_RD_BUSY 0 0 0 1 0 1 
+state.S_ZERO 0 0 1 0 0 1 
+state.S_DONE 0 1 0 0 0 1 
+state.S_RESTART 1 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|sd_ctrl:sd_ctrl_inst|sd_read:sd_read_inst|state
+Name state.CMD17_ACK state.RD_DATA state.SEND_CMD17 state.IDLE state.RD_END 
+state.IDLE 0 0 0 0 0 
+state.SEND_CMD17 0 0 1 1 0 
+state.RD_DATA 0 1 0 1 0 
+state.CMD17_ACK 1 0 0 1 0 
+state.RD_END 0 0 0 1 1 
+
+State Machine - |audio_sd_play_mp3|sd_ctrl:sd_ctrl_inst|sd_write:sd_write_inst|state
+Name state.WR_END state.WR_BUSY state.CMD24_ACK state.WR_DATA state.SEND_CMD24 state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.SEND_CMD24 0 0 0 0 1 1 
+state.WR_DATA 0 0 0 1 0 1 
+state.CMD24_ACK 0 0 1 0 0 1 
+state.WR_BUSY 0 1 0 0 0 1 
+state.WR_END 1 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|sd_ctrl:sd_ctrl_inst|sd_init:sd_init_inst|state
+Name state.INIT_END state.ACMD41_ACK state.SEND_CMD55 state.CMD8_ACK state.CMD55_ACK state.SEND_ACMD41 state.CMD0_ACK state.SEND_CMD8 state.SEND_CMD0 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 
+state.SEND_CMD0 0 0 0 0 0 0 0 0 1 1 
+state.SEND_CMD8 0 0 0 0 0 0 0 1 0 1 
+state.CMD0_ACK 0 0 0 0 0 0 1 0 0 1 
+state.SEND_ACMD41 0 0 0 0 0 1 0 0 0 1 
+state.CMD55_ACK 0 0 0 0 1 0 0 0 0 1 
+state.CMD8_ACK 0 0 0 1 0 0 0 0 0 1 
+state.SEND_CMD55 0 0 1 0 0 0 0 0 0 1 
+state.ACMD41_ACK 0 1 0 0 0 0 0 0 0 1 
+state.INIT_END 1 0 0 0 0 0 0 0 0 1 

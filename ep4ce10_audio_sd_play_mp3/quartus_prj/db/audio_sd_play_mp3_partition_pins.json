@@ -1,0 +1,61 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "audio_dacdat",
+					"strict" : false
+				},
+				{
+					"name" : "scl",
+					"strict" : false
+				},
+				{
+					"name" : "sd_clk",
+					"strict" : false
+				},
+				{
+					"name" : "sd_cs_n",
+					"strict" : false
+				},
+				{
+					"name" : "sd_mosi",
+					"strict" : false
+				},
+				{
+					"name" : "sda",
+					"strict" : false
+				},
+				{
+					"name" : "sys_rst_n",
+					"strict" : false
+				},
+				{
+					"name" : "audio_bclk",
+					"strict" : false
+				},
+				{
+					"name" : "audio_lrc",
+					"strict" : false
+				},
+				{
+					"name" : "sd_miso",
+					"strict" : false
+				},
+				{
+					"name" : "key_pause",
+					"strict" : false
+				},
+				{
+					"name" : "key_next",
+					"strict" : false
+				},
+				{
+					"name" : "key_prev",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

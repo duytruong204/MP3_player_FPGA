@@ -1,0 +1,18 @@
+20:16:50 **** Incremental Build of configuration Nios II for project main ****
+make all 
+Info: Building ../main_bsp/
+D:/Application/intelFPGA_lite/17.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../main_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../main_bsp//HAL/inc -I../main_bsp/ -I../main_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+Info: Linking main.elf
+nios2-elf-g++  -T'../main_bsp//linker.x' -msys-crt0='../main_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../main_bsp/  -msmallc  -Wl,-Map=main.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o main.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert main.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios --quartus_project_dir "D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/rtl" --sopcinfo D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/rtl/software/main_bsp/../../nios.sopcinfo
+Info: (main.elf) 952 Bytes program size (code + initialized data).
+Info:            7080 Bytes free for stack + heap.
+Info: Creating main.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source main.elf >main.objdump
+[main build complete]
+
+20:16:52 Build Finished (took 1s.828ms)
+

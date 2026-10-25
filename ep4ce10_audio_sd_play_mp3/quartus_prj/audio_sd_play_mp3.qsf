@@ -1,0 +1,159 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 17:08:32  March 13, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		audio_sd_play_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE10F17C8
+set_global_assignment -name TOP_LEVEL_ENTITY audio_sd_play_mp3
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 256
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_SIMULATION_TOOL "QuestaSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+
+# ---- golden SD card and WM8978 blocks (unchanged copies) ----
+
+# ---- new: MP3 glue ----
+
+# ---- MAC_MP3 decoder (ported to Cyclone IV E) ----
+set_global_assignment -name SEARCH_PATH ../rtl/mp3
+set_global_assignment -name SEARCH_PATH ../rtl/mp3/newhuff
+set_global_assignment -name SEARCH_PATH ../rtl/mp3/mac_unit
+
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+set_location_assignment PIN_M15 -to sys_rst_n
+set_location_assignment PIN_E1 -to sys_clk
+set_location_assignment PIN_N14 -to sda
+set_location_assignment PIN_P15 -to scl
+set_location_assignment PIN_D14 -to audio_mclk
+set_location_assignment PIN_E9 -to audio_lrc
+set_location_assignment PIN_D11 -to audio_dacdat
+set_location_assignment PIN_D12 -to audio_bclk
+set_location_assignment PIN_J12 -to sd_clk
+set_location_assignment PIN_K12 -to sd_cs_n
+set_location_assignment PIN_J16 -to sd_miso
+set_location_assignment PIN_J14 -to sd_mosi
+set_location_assignment PIN_E15 -to key_next
+set_location_assignment PIN_M1 -to key_pause
+set_location_assignment PIN_M2 -to key_prev
+
+
+set_global_assignment -name QIP_FILE ../rtl/nios/synthesis/nios.qip
+set_global_assignment -name VERILOG_FILE ../rtl/sd/sd_write.v
+set_global_assignment -name VERILOG_FILE ../rtl/sd/sd_read.v
+set_global_assignment -name VERILOG_FILE ../rtl/sd/sd_init.v
+set_global_assignment -name VERILOG_FILE ../rtl/sd/sd_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/wm8978/wm8978_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/wm8978/wm8978_cfg.v
+set_global_assignment -name VERILOG_FILE ../rtl/wm8978/i2c_reg_cfg.v
+set_global_assignment -name VERILOG_FILE ../rtl/wm8978/i2c_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/wm8978/audio_send.v
+set_global_assignment -name VERILOG_FILE ../rtl/wm8978/audio_rcv.v
+set_global_assignment -name VERILOG_FILE ../rtl/pcm_out_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3_feeder.v
+set_global_assignment -name VERILOG_FILE ../rtl/key_ctrl.v
+set_global_assignment -name VERILOG_FILE ../rtl/pulse_sync.v
+set_global_assignment -name VERILOG_FILE ../rtl/audio_sd_play_mp3.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mp3_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/lpm_CH0_MAC_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/lpm_CH0_PCM_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/lpm_CH1_MAC_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/lpm_CH1_PCM_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/lpm_HUFF_DP.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/lpm_req_ram.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/Mult_Requan.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/Requantizer_coefficient.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/huffctl.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/huffrom.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/lpm_huff_romblock0.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/lpm_huff_romblock1.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/lpm_requantizer_coefficient_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/newhuff/streamer.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/add_accum.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/antialias_imdct_coefficient.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/imdct_current_granule.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/imdct_previous_granule.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_antialias_imdct_coefficient_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_imdct_current_granule_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_imdct_previous_granule_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_mult_16.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_polyphase_mdct_coefficient_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_polyphase_sample_buffer_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/lpm_polyphase_window_coefficient_RAM.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/mac_unit.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/mult_16.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/mult_accum.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/polyphase_mdct_coefficient.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/polyphase_sample_buffer.v
+set_global_assignment -name VERILOG_FILE ../rtl/mp3/mac_unit/polyphase_window_coefficient.v
+set_global_assignment -name QIP_FILE ip_core/clk_gen/clk_gen.qip
+set_global_assignment -name SDC_FILE audio_sd_play_mp3.sdc
+set_location_assignment PIN_E1 -to clk_clk
+set_location_assignment PIN_M15 -to reset_reset_n
+set_location_assignment PIN_J14 -to altera_up_sd_card_avalon_interface_conduit_end_b_SD_cmd
+set_location_assignment PIN_J16 -to altera_up_sd_card_avalon_interface_conduit_end_b_SD_dat
+set_location_assignment PIN_K12 -to altera_up_sd_card_avalon_interface_conduit_end_b_SD_dat3
+set_location_assignment PIN_J12 -to altera_up_sd_card_avalon_interface_conduit_end_o_SD_clock
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "2.5 V" -to audio_bclk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to audio_dacdat
+set_instance_assignment -name IO_STANDARD "2.5 V" -to audio_lrc
+set_instance_assignment -name IO_STANDARD "2.5 V" -to audio_mclk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to key_next
+set_instance_assignment -name IO_STANDARD "2.5 V" -to key_pause
+set_instance_assignment -name IO_STANDARD "2.5 V" -to key_prev
+set_instance_assignment -name IO_STANDARD "2.5 V" -to scl
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sd_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sd_cs_n
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sd_miso
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sd_mosi
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sda
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sys_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sys_rst_n
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
