@@ -1,0 +1,16 @@
+Command: /remote/us01sgnfs01239/workspace/duchy/MUSIC/ep4ce10_audio_sd_play_mp3/tb/build/simv_tb_codec_input -l /remote/us01sgnfs01239/workspace/duchy/MUSIC/ep4ce10_audio_sd_play_mp3/tb/out/run_tb_codec_input.log
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version V-2023.12-SP2-10_Full64; Runtime version V-2023.12-SP2-10_Full64;  Oct 15 17:21 2026
+S0..3 = cbf2 70a4 f241 531a ; new slots 3072..3075 = cbf2 70a4 f241 531a
+golden: sample 0 is sent in slot 2 on the LEFT channel
+new   : first non-zero sample in slot 3072 on the LEFT channel
+new   : 2128 slots compared, mute period = 3072 slots (3072 expected = MUTE_FRAMES 1536 frames)
+dac_data last changes 108 BCLK (golden) / 108 BCLK (new) before the next LRC edge (min over run)
+TB-PASS codec input equivalent: same audio_send serialisation, bit-exact samples, dac_data reloaded inside the slot, well before the next LRC edge
+$finish called from file "/remote/us01sgnfs01239/workspace/duchy/MUSIC/ep4ce10_audio_sd_play_mp3/tb/tb_codec_input.sv", line 157.
+$finish at simulation time          58944647422
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 58944647422 ps
+CPU Time:      1.130 seconds;       Data structure size:   0.1Mb
+Thu Oct 15 17:21:52 2026

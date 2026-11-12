@@ -1,0 +1,37 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios.mp3_wr_en_pio -pg 1 -lvl 3 -y 510
+preplace inst nios -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios.sys_sdram_pll.reset_from_locked -pg 1
+preplace inst nios.mp3_wr_request_pio -pg 1 -lvl 3 -y 610
+preplace inst nios.mp3_wr_idle_pio -pg 1 -lvl 3 -y 910
+preplace inst nios.sys_sdram_pll.sys_pll -pg 1
+preplace inst nios.sys_sdram_pll -pg 1 -lvl 3 -y 260
+preplace inst nios.nios2_gen2.clock_bridge -pg 1
+preplace inst nios.mp3_wr_data_pio -pg 1 -lvl 3 -y 410
+preplace inst nios.clk_0 -pg 1 -lvl 1 -y 270
+preplace inst nios.sd_card_interface -pg 1 -lvl 3 -y 710
+preplace inst nios.mp3_wr_addr_pio -pg 1 -lvl 3 -y 30
+preplace inst nios.sdram_controller -pg 1 -lvl 3 -y 810
+preplace inst nios.jtag_uart -pg 1 -lvl 3 -y 130
+preplace inst nios.nios2_gen2.reset_bridge -pg 1
+preplace inst nios.pio_0 -pg 1 -lvl 4 -y 310
+preplace inst nios.nios2_gen2.cpu -pg 1
+preplace inst nios.nios2_gen2 -pg 1 -lvl 2 -y 140
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>nios</net_container>(MASTER)clk_0.clk,(SLAVE)sys_sdram_pll.ref_clk) 1 1 2 NJ 280 830
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)mp3_wr_request_pio.external_connection,(SLAVE)nios.mp3_wr_request_pio_external_connection) 1 0 3 NJ 640 NJ 640 NJ
+preplace netloc INTERCONNECT<net_container>nios</net_container>(SLAVE)sd_card_interface.avalon_sdcard_slave,(SLAVE)pio_0.s1,(SLAVE)mp3_wr_request_pio.s1,(SLAVE)mp3_wr_en_pio.s1,(MASTER)nios2_gen2.data_master,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)sdram_controller.s1,(MASTER)nios2_gen2.instruction_master,(SLAVE)mp3_wr_addr_pio.s1,(SLAVE)mp3_wr_idle_pio.s1,(SLAVE)mp3_wr_data_pio.s1) 1 1 3 450 980 810 400 1150
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.mp3_wr_idle_pio_external_connection,(SLAVE)mp3_wr_idle_pio.external_connection) 1 0 3 NJ 940 NJ 940 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.sd_card_conduit_end,(SLAVE)sd_card_interface.conduit_end) 1 0 3 NJ 760 NJ 760 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)mp3_wr_data_pio.external_connection,(SLAVE)nios.mp3_wr_data_pio_external_connection) 1 0 3 NJ 440 NJ 440 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)mp3_wr_addr_pio.external_connection,(SLAVE)nios.mp3_wr_addr_pio_external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc FAN_OUT<net_container>nios</net_container>(MASTER)clk_0.clk_reset,(SLAVE)nios2_gen2.reset,(SLAVE)mp3_wr_addr_pio.reset,(SLAVE)sdram_controller.reset,(SLAVE)sd_card_interface.reset,(SLAVE)pio_0.reset,(SLAVE)mp3_wr_en_pio.reset,(SLAVE)jtag_uart.reset,(SLAVE)mp3_wr_request_pio.reset,(SLAVE)mp3_wr_data_pio.reset,(SLAVE)sys_sdram_pll.ref_reset,(SLAVE)mp3_wr_idle_pio.reset) 1 1 3 410 960 850 360 N
+preplace netloc EXPORT<net_container>nios</net_container>(MASTER)sys_sdram_pll.sdram_clk,(MASTER)nios.sys_sdram_pll_sdram_clk) 1 3 2 NJ 290 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.sdram_controller_wire,(SLAVE)sdram_controller.wire) 1 0 3 NJ 880 NJ 880 NJ
+preplace netloc EXPORT<net_container>nios</net_container>(SLAVE)nios.mp3_wr_en_pio_external_connection,(SLAVE)mp3_wr_en_pio.external_connection) 1 0 3 NJ 540 NJ 540 NJ
+preplace netloc POINT_TO_POINT<net_container>nios</net_container>(MASTER)nios2_gen2.irq,(SLAVE)jtag_uart.irq) 1 2 1 870
+preplace netloc FAN_OUT<net_container>nios</net_container>(SLAVE)jtag_uart.clk,(SLAVE)sd_card_interface.clk,(SLAVE)mp3_wr_data_pio.clk,(SLAVE)mp3_wr_en_pio.clk,(SLAVE)pio_0.clk,(SLAVE)sdram_controller.clk,(SLAVE)mp3_wr_request_pio.clk,(SLAVE)nios2_gen2.clk,(MASTER)sys_sdram_pll.sys_clk,(SLAVE)mp3_wr_idle_pio.clk,(SLAVE)mp3_wr_addr_pio.clk) 1 1 3 430 900 890 380 1130
+levelinfo -pg 1 0 200 1500
+levelinfo -hier nios 210 240 570 970 1180 1330

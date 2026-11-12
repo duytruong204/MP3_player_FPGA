@@ -1,0 +1,174 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Application\intelFPGA_lite\17.1\Project\ep4ce10_audio_sd_play_mp3\nios.qsys --block-symbol-file --output-directory=D:\Application\intelFPGA_lite\17.1\Project\ep4ce10_audio_sd_play_mp3\nios --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading ep4ce10_audio_sd_play_mp3/nios.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding mp3_wr_addr_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_addr_pio
+Progress: Adding mp3_wr_data_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_data_pio
+Progress: Adding mp3_wr_en_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_en_pio
+Progress: Adding mp3_wr_idle_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_idle_pio
+Progress: Adding mp3_wr_request_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_request_pio
+Progress: Adding nios2_gen2 [altera_nios2_gen2 17.1]
+Progress: Parameterizing module nios2_gen2
+Progress: Adding pio_0 [altera_avalon_pio 17.1]
+Progress: Parameterizing module pio_0
+Progress: Adding sd_card_interface [Altera_UP_SD_Card_Avalon_Interface 17.1]
+Progress: Parameterizing module sd_card_interface
+Progress: Adding sdram_controller [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module sdram_controller
+Progress: Adding sys_sdram_pll [altera_up_avalon_sys_sdram_pll 17.1]
+Progress: Parameterizing module sys_sdram_pll
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: nios.mp3_wr_request_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: nios.: Can't contact license server "27000@DESKTOP-TDDUY" -- this server will be ignored.
+Info: nios.sdram_controller: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: nios.sys_sdram_pll: Refclk Freq: 50.0
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Application\intelFPGA_lite\17.1\Project\ep4ce10_audio_sd_play_mp3\nios.qsys --synthesis=VERILOG --output-directory=D:\Application\intelFPGA_lite\17.1\Project\ep4ce10_audio_sd_play_mp3\nios\synthesis --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading ep4ce10_audio_sd_play_mp3/nios.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 17.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart [altera_avalon_jtag_uart 17.1]
+Progress: Parameterizing module jtag_uart
+Progress: Adding mp3_wr_addr_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_addr_pio
+Progress: Adding mp3_wr_data_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_data_pio
+Progress: Adding mp3_wr_en_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_en_pio
+Progress: Adding mp3_wr_idle_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_idle_pio
+Progress: Adding mp3_wr_request_pio [altera_avalon_pio 17.1]
+Progress: Parameterizing module mp3_wr_request_pio
+Progress: Adding nios2_gen2 [altera_nios2_gen2 17.1]
+Progress: Parameterizing module nios2_gen2
+Progress: Adding pio_0 [altera_avalon_pio 17.1]
+Progress: Parameterizing module pio_0
+Progress: Adding sd_card_interface [Altera_UP_SD_Card_Avalon_Interface 17.1]
+Progress: Parameterizing module sd_card_interface
+Progress: Adding sdram_controller [altera_avalon_new_sdram_controller 17.1]
+Progress: Parameterizing module sdram_controller
+Progress: Adding sys_sdram_pll [altera_up_avalon_sys_sdram_pll 17.1]
+Progress: Parameterizing module sys_sdram_pll
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: nios.mp3_wr_request_pio: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios.pio_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Warning: nios.: Can't contact license server "27000@DESKTOP-TDDUY" -- this server will be ignored.
+Info: nios.sdram_controller: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info: nios.sys_sdram_pll: Refclk Freq: 50.0
+Info: nios: Generating nios "nios" for QUARTUS_SYNTH
+Info: jtag_uart: Starting RTL generation for module 'nios_jtag_uart'
+Info: jtag_uart:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios_jtag_uart --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0006_jtag_uart_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0006_jtag_uart_gen//nios_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart: Done RTL generation for module 'nios_jtag_uart'
+Info: jtag_uart: "nios" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info: mp3_wr_addr_pio: Starting RTL generation for module 'nios_mp3_wr_addr_pio'
+Info: mp3_wr_addr_pio:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_mp3_wr_addr_pio --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0007_mp3_wr_addr_pio_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0007_mp3_wr_addr_pio_gen//nios_mp3_wr_addr_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: mp3_wr_addr_pio: Done RTL generation for module 'nios_mp3_wr_addr_pio'
+Info: mp3_wr_addr_pio: "nios" instantiated altera_avalon_pio "mp3_wr_addr_pio"
+Info: mp3_wr_data_pio: Starting RTL generation for module 'nios_mp3_wr_data_pio'
+Info: mp3_wr_data_pio:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_mp3_wr_data_pio --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0008_mp3_wr_data_pio_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0008_mp3_wr_data_pio_gen//nios_mp3_wr_data_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: mp3_wr_data_pio: Done RTL generation for module 'nios_mp3_wr_data_pio'
+Info: mp3_wr_data_pio: "nios" instantiated altera_avalon_pio "mp3_wr_data_pio"
+Info: mp3_wr_en_pio: Starting RTL generation for module 'nios_mp3_wr_en_pio'
+Info: mp3_wr_en_pio:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_mp3_wr_en_pio --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0009_mp3_wr_en_pio_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0009_mp3_wr_en_pio_gen//nios_mp3_wr_en_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: mp3_wr_en_pio: Done RTL generation for module 'nios_mp3_wr_en_pio'
+Info: mp3_wr_en_pio: "nios" instantiated altera_avalon_pio "mp3_wr_en_pio"
+Info: mp3_wr_request_pio: Starting RTL generation for module 'nios_mp3_wr_request_pio'
+Info: mp3_wr_request_pio:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_mp3_wr_request_pio --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0010_mp3_wr_request_pio_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0010_mp3_wr_request_pio_gen//nios_mp3_wr_request_pio_component_configuration.pl  --do_build_sim=0  ]
+Info: mp3_wr_request_pio: Done RTL generation for module 'nios_mp3_wr_request_pio'
+Info: mp3_wr_request_pio: "nios" instantiated altera_avalon_pio "mp3_wr_request_pio"
+Info: nios2_gen2: "nios" instantiated altera_nios2_gen2 "nios2_gen2"
+Info: pio_0: Starting RTL generation for module 'nios_pio_0'
+Info: pio_0:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios_pio_0 --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0011_pio_0_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0011_pio_0_gen//nios_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0: Done RTL generation for module 'nios_pio_0'
+Info: pio_0: "nios" instantiated altera_avalon_pio "pio_0"
+Warning: Can't contact license server "27000@DESKTOP-TDDUY" -- this server will be ignored.
+Info: sd_card_interface: "nios" instantiated Altera_UP_SD_Card_Avalon_Interface "sd_card_interface"
+Info: sdram_controller: Starting RTL generation for module 'nios_sdram_controller'
+Info: sdram_controller:   Generation command is [exec D:/application/intelfpga_lite/17.1/quartus/bin64/perl/bin/perl.exe -I D:/application/intelfpga_lite/17.1/quartus/bin64/perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=nios_sdram_controller --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0012_sdram_controller_gen/ --quartus_dir=D:/application/intelfpga_lite/17.1/quartus --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0012_sdram_controller_gen//nios_sdram_controller_component_configuration.pl  --do_build_sim=0  ]
+Info: sdram_controller: Done RTL generation for module 'nios_sdram_controller'
+Info: sdram_controller: "nios" instantiated altera_avalon_new_sdram_controller "sdram_controller"
+Info: sys_sdram_pll: "nios" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "nios" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "nios" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "nios" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'nios_nios2_gen2_cpu'
+Info: cpu:   Generation command is [exec D:/Application/intelFPGA_lite/17.1/quartus/bin64//eperlcmd.exe -I D:/Application/intelFPGA_lite/17.1/quartus/bin64//perl/lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/europa -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin/perl_lib -I D:/application/intelfpga_lite/17.1/quartus/sopc_builder/bin -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/application/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/application/intelfpga_lite/17.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios_nios2_gen2_cpu --dir=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0015_cpu_gen/ --quartus_bindir=D:/Application/intelFPGA_lite/17.1/quartus/bin64/ --verilog --config=C:/Users/DUYTRU~1/AppData/Local/Temp/alt0761_8298968295280933254.dir/0015_cpu_gen//nios_nios2_gen2_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2026.11.04 22:16:38 (*) Starting Nios II generation
+Info: cpu: # 2026.11.04 22:16:38 (*)   Checking for plaintext license.
+Info: cpu: # 2026.11.04 22:16:40 (*)   Couldn't query license setup in Quartus directory D:/Application/intelFPGA_lite/17.1/quartus/bin64/
+Info: cpu: # 2026.11.04 22:16:40 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2026.11.04 22:16:40 (*)   Plaintext license not found.
+Info: cpu: # 2026.11.04 22:16:40 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2026.11.04 22:16:40 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2026.11.04 22:16:40 (*)   Creating all objects for CPU
+Info: cpu: # 2026.11.04 22:16:45 (*)   Generating RTL from CPU objects
+Info: cpu: # 2026.11.04 22:16:45 (*)   Creating plain-text RTL
+Info: cpu: # 2026.11.04 22:16:47 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'nios_nios2_gen2_cpu'
+Info: cpu: "nios2_gen2" instantiated altera_nios2_gen2_unit "cpu"
+Info: sys_pll: "sys_sdram_pll" instantiated altera_up_altpll "sys_pll"
+Info: reset_from_locked: "sys_sdram_pll" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: nios2_gen2_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_data_master_translator"
+Info: jtag_uart_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_avalon_jtag_slave_translator"
+Info: nios2_gen2_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_data_master_agent"
+Info: jtag_uart_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_avalon_jtag_slave_agent"
+Info: jtag_uart_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: sdram_controller_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "sdram_controller_s1_burst_adapter"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/nios/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/nios/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/nios/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: sdram_controller_s1_rsp_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "sdram_controller_s1_rsp_width_adapter"
+Info: Reusing file D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/nios/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file D:/Application/intelFPGA_lite/17.1/Project/ep4ce10_audio_sd_play_mp3/nios/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_003: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_003"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_003" instantiated error_adapter "error_adapter_0"
+Info: nios: Done "nios" with 41 modules, 72 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

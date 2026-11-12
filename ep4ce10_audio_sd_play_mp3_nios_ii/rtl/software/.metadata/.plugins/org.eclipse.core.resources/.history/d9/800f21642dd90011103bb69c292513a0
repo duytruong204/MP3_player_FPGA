@@ -1,0 +1,191 @@
+
+#include <system.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <unistd.h>
+#include <stdint.h>
+#include <string.h>
+#include "altera_up_sd_card_avalon_interface.h"
+#include <altera_avalon_pio_regs.h>
+
+// Number of Byte in One Sector
+#define BYTE_PER_SECTOR         512
+#define NUM_MP3_RAM_ADDR		1024
+
+// Prototypes
+alt_up_sd_card_dev* check_sd_card(void);
+int init_audio_subsystem(void);
+void processingFilesOneByOne(void);
+
+int main()
+{ 
+	printf("--- Starting SD Card Application ---\n");
+
+	// 1. Initialize and verify the SD Card
+	alt_up_sd_card_dev *sd_card = check_sd_card();
+
+	printf("SD Card initialized successfully!\n");
+	// 2. Process files sequentially
+	processingFilesOneByOne();
+
+	printf("--- Application Finished ---\n");
+	return 0;
+}
+
+alt_up_sd_card_dev* check_sd_card(void)
+{
+    alt_up_sd_card_dev *dev = alt_up_sd_card_open_dev("/dev/sd_card_interface");
+    if (dev == NULL) {
+        printf("ERROR: SD card device interface not opened.\n");
+        return NULL;
+    }
+    if (!alt_up_sd_card_is_Present()) {
+        printf("ERROR: No SD card present in slot.\n");
+        return NULL;
+    }
+    if (!alt_up_sd_card_is_FAT16()) {
+        printf("ERROR: SD card present, but unknown/unsupported file system.\n");
+        return NULL;
+    }
+    return dev;
+}
+
+void processingFilesOneByOne(void)
+{
+    // The Altera IP function requires a writable char buffer of at least 13 bytes (8.3 format).
+    char filename[13] = "";
+    char fileType[8] = "MP3";
+
+    // Find the first file
+    short int status = alt_up_sd_card_find_first(".", filename);
+
+    while (status == 0) {
+        // Simple filter: Check if the extension ends with "MP3"
+        size_t len = strlen(filename);
+        if (len > 4 && strcasecmp(&filename[len - 3], fileType) == 0) {
+            printf("\nFound %s File: %s\n", fileType, filename);
+            decode_and_play_mp3(filename);
+        }
+        else {
+            printf("Skipping file: %s\n", filename);
+        }
+        // Search for next file
+        status = alt_up_sd_card_find_next(filename);
+    }
+
+    printf("\nNo more files found on SD card root.\n");
+}
+
+int decode_and_play_mp3(const char *filename) {
+    // 1. Open the file via Altera SD Card Avalon Component Interface
+    short int file_handle = alt_up_sd_card_fopen(filename, false);
+    if (file_handle < 0) {
+        printf("ERROR: Could not open file %s\n", filename);
+        return -1;
+    }
+
+    IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_IDLE_PIO_BASE, 1);
+    IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_EN_PIO_BASE, 0);
+
+    printf("Starting MP3 Streaming...\n");
+
+    while(1) {
+        if (IORD_ALTERA_AVALON_PIO_DATA(MP3_WR_REQUEST_PIO_BASE) == 1) {
+            IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_IDLE_PIO_BASE, 0);
+
+            for (int ram_index = 0; ram_index < NUM_MP3_RAM_ADDR; ram_index++) {
+                short int raw_byte1 = alt_up_sd_card_read(file_handle);
+                short int raw_byte2 = alt_up_sd_card_read(file_handle);
+
+                // Faster error and EOF checking
+                if (raw_byte1 < 0 || raw_byte2 < 0) {
+                    printf("\n End song.\n");
+                    goto END_SONG;
+                }
+
+                // Direct bit-masking without redundant type casting
+                unsigned short mp3_data_16bit = (raw_byte1 << 8) | (raw_byte2 & 0x00FF);
+
+                // Sequence data directly to PIO registers
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_ADDR_PIO_BASE, ram_index);
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_DATA_PIO_BASE, mp3_data_16bit);
+
+                // Pulse the Enable pin as quickly as the bus allows
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_EN_PIO_BASE, 1);
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_EN_PIO_BASE, 0);
+            }
+            IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_IDLE_PIO_BASE, 1);
+        }
+    }
+
+    END_SONG:
+    alt_up_sd_card_fclose(file_handle);
+    return 0;
+}
+
+#define BUFFER_SIZE 1024  // Storage size for pre-fetching data from the SD card
+unsigned short mp3_buffer[BUFFER_SIZE];
+int buf_head = 0; // Read pointer for streaming data out to the MP3 hardware
+int buf_tail = 0; // Write pointer for loading data from the SD card
+int buf_count = 0; // Total count of available 16-bit words inside the buffer
+
+int decode_and_play_mp3(const char *filename) {
+    // 1. Open the file via Altera SD Card Avalon Component Interface
+    short int file_handle = alt_up_sd_card_fopen(filename, false);
+    if (file_handle < 0) {
+        printf("ERROR: Could not open file %s\n", filename);
+        return -1;
+    }
+
+    IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_IDLE_PIO_BASE, 1);
+    IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_EN_PIO_BASE, 0);
+    printf("Starting MP3 Streaming...\n");
+
+    // Initialize buffer tracking variables
+    buf_head = 0;
+    buf_tail = 0;
+    buf_count = 0;
+
+    while(1) {
+        // TASK 1: If there is free space in the buffer, proactively pre-fetch bytes from the SD Card
+        if (buf_count < BUFFER_SIZE) {
+            short int raw_byte1 = alt_up_sd_card_read(file_handle);
+            short int raw_byte2 = alt_up_sd_card_read(file_handle);
+
+            // Check for file errors or End-Of-File (EOF) condition
+            if (raw_byte1 < 0 || raw_byte2 < 0) {
+                printf("\n End song.\n");
+                goto END_SONG;
+            }
+
+            // Combine bytes into a 16-bit word and store it at the tail of the circular buffer
+            mp3_buffer[buf_tail] = (raw_byte1 << 8) | (raw_byte2 & 0x00FF);
+            buf_tail = (buf_tail + 1) % BUFFER_SIZE;
+            buf_count++;
+        }
+
+        // TASK 2: Service the MP3 hardware when requested and a full frame is accumulated in RAM
+        if ((IORD_ALTERA_AVALON_PIO_DATA(MP3_WR_REQUEST_PIO_BASE) == 1) && (buf_count >= NUM_MP3_RAM_ADDR)) {
+            IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_IDLE_PIO_BASE, 0);
+
+            // This loop runs instantly now because it extracts data directly from Nios II internal RAM
+            for(int ram_index = 0; ram_index < NUM_MP3_RAM_ADDR; ram_index++) {
+                unsigned short mp3_data_16bit = mp3_buffer[buf_head];
+                buf_head = (buf_head + 1) % BUFFER_SIZE;
+                buf_count--;
+
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_ADDR_PIO_BASE, ram_index);
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_DATA_PIO_BASE, mp3_data_16bit);
+
+                // Generate a brief hardware write enable pulse
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_EN_PIO_BASE, 1);
+                IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_EN_PIO_BASE, 0);
+            }
+            IOWR_ALTERA_AVALON_PIO_DATA(MP3_WR_IDLE_PIO_BASE, 1);
+        }
+    }
+
+    END_SONG:
+    alt_up_sd_card_fclose(file_handle);
+    return 0;
+}

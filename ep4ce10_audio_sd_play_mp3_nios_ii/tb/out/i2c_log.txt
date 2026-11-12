@@ -1,0 +1,15 @@
+dev=34 reg=0 data=000
+dev=34 reg=1 data=12f
+dev=34 reg=2 data=180
+dev=34 reg=4 data=010
+dev=34 reg=6 data=001
+dev=34 reg=10 data=008
+dev=34 reg=43 data=010
+dev=34 reg=49 data=006
+dev=34 reg=50 data=001
+dev=34 reg=51 data=001
+dev=34 reg=52 data=19e
+dev=34 reg=53 data=19e
+dev=34 reg=54 data=1b2
+dev=34 reg=55 data=1b2
+dev=34 reg=3 data=06f

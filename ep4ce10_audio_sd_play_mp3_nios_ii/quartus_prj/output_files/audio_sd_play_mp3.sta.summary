@@ -1,0 +1,353 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 6.729
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'sys_clk'
+Slack : 16.261
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 17.047
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'audio_bclk'
+Slack : 38.855
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 44.519
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 57.063
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 258.642
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'audio_bclk'
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.453
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sys_clk'
+Slack : 1.342
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 14.091
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 47.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 75.660
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'audio_bclk'
+Slack : 85.571
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'audio_bclk'
+Slack : 1.147
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 1.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 1.444
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.667
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 9.715
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9.718
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 39.718
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'audio_bclk'
+Slack : 43.950
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.655
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 159.718
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 7.244
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'sys_clk'
+Slack : 16.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 17.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'audio_bclk'
+Slack : 39.095
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 44.887
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 58.458
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 261.842
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'audio_bclk'
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sys_clk'
+Slack : 1.224
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 14.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 47.693
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 75.852
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'audio_bclk'
+Slack : 85.742
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'audio_bclk'
+Slack : 1.053
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 1.233
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 1.260
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 1.299
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.671
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 9.716
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9.718
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 39.717
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'audio_bclk'
+Slack : 43.960
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.575
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 159.714
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 14.094
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'sys_clk'
+Slack : 17.864
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 18.710
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'audio_bclk'
+Slack : 42.271
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 47.725
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 69.966
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 292.764
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'audio_bclk'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 0.186
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sys_clk'
+Slack : 0.508
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 17.261
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 48.974
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 77.969
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'audio_bclk'
+Slack : 87.210
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'audio_bclk'
+Slack : 0.489
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 0.562
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.579
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 0.592
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.372
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'u0|sys_sdram_pll|sys_pll|PLL_for_DE_Series_Boards|auto_generated|pll1|clk[0]'
+Slack : 9.734
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[1]'
+Slack : 9.797
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[3]'
+Slack : 39.733
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'audio_bclk'
+Slack : 43.658
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.500
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_gen_inst|altpll_component|auto_generated|pll1|clk[4]'
+Slack : 159.732
+TNS   : 0.000
+
+------------------------------------------------------------

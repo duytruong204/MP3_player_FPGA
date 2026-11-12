@@ -1,0 +1,191 @@
+
+State Machine - |audio_sd_play_mp3|wm8978_ctrl:wm8978_ctrl_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|state
+Name state.STOP state.N_ACK state.RD_DATA state.ACK_5 state.SEND_RD_ADDR state.START_2 state.ACK_4 state.WR_DATA state.ACK_3 state.SEND_B_ADDR_L state.ACK_2 state.SEND_B_ADDR_H state.ACK_1 state.SEND_D_ADDR state.START_1 state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.START_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.SEND_D_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ACK_1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.SEND_B_ADDR_H 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ACK_2 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.SEND_B_ADDR_L 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ACK_3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WR_DATA 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ACK_4 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.START_2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.SEND_RD_ADDR 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ACK_5 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.RD_DATA 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.N_ACK 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.STOP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|NIOS_state
+Name NIOS_state.011 NIOS_state.010 NIOS_state.001 NIOS_state.000 NIOS_state.100 
+NIOS_state.000 0 0 0 0 0 
+NIOS_state.001 0 0 1 1 0 
+NIOS_state.010 0 1 0 1 0 
+NIOS_state.011 1 0 0 1 0 
+NIOS_state.100 0 0 0 1 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|MAC_state
+Name MAC_state.00 MAC_state.10 MAC_state.01 
+MAC_state.00 0 0 0 
+MAC_state.01 1 0 1 
+MAC_state.10 1 1 0 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|mac_unit:MAC_module|CH1_state
+Name CH1_state.1101 CH1_state.1001 CH1_state.1000 CH1_state.0111 CH1_state.0110 CH1_state.0101 CH1_state.0100 CH1_state.0011 CH1_state.0010 CH1_state.0001 CH1_state.0000 
+CH1_state.0000 0 0 0 0 0 0 0 0 0 0 0 
+CH1_state.0001 0 0 0 0 0 0 0 0 0 1 1 
+CH1_state.0010 0 0 0 0 0 0 0 0 1 0 1 
+CH1_state.0011 0 0 0 0 0 0 0 1 0 0 1 
+CH1_state.0100 0 0 0 0 0 0 1 0 0 0 1 
+CH1_state.0101 0 0 0 0 0 1 0 0 0 0 1 
+CH1_state.0110 0 0 0 0 1 0 0 0 0 0 1 
+CH1_state.0111 0 0 0 1 0 0 0 0 0 0 1 
+CH1_state.1000 0 0 1 0 0 0 0 0 0 0 1 
+CH1_state.1001 0 1 0 0 0 0 0 0 0 0 1 
+CH1_state.1101 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|mac_unit:MAC_module|CH0_state
+Name CH0_state.1101 CH0_state.1100 CH0_state.1011 CH0_state.1010 CH0_state.1001 CH0_state.1000 CH0_state.0111 CH0_state.0110 CH0_state.0101 CH0_state.0100 CH0_state.0011 CH0_state.0010 CH0_state.0001 CH0_state.0000 
+CH0_state.0000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+CH0_state.0001 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+CH0_state.0010 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+CH0_state.0011 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+CH0_state.0100 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+CH0_state.0101 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+CH0_state.0110 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+CH0_state.0111 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+CH0_state.1000 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+CH0_state.1001 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+CH0_state.1010 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+CH0_state.1011 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+CH0_state.1100 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+CH0_state.1101 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|huffctl:HUFFMANDECODER|decodestage
+Name decodestage.00 decodestage.10 decodestage.01 
+decodestage.00 0 0 0 
+decodestage.01 1 0 1 
+decodestage.10 1 1 0 
+
+State Machine - |audio_sd_play_mp3|mp3_top:mp3_top_inst|huffctl:HUFFMANDECODER|stage
+Name stage.101 stage.100 stage.011 stage.010 stage.001 stage.000 
+stage.000 0 0 0 0 0 0 
+stage.001 0 0 0 0 1 1 
+stage.010 0 0 0 1 0 1 
+stage.011 0 0 1 0 0 1 
+stage.100 0 1 0 0 0 1 
+stage.101 1 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|nios_sdram_controller:sdram_controller|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|nios_sdram_controller:sdram_controller|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|nios_sdram_controller:sdram_controller|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|nios_sdram_controller:sdram_controller|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|Altera_UP_SD_Card_Avalon_Interface:sd_card_interface|current_cmd_state
+Name current_cmd_state.s_UPDATE_AUX_SR current_cmd_state.s_WAIT_RESPONSE current_cmd_state.s_WAIT_COMMAND current_cmd_state.s_RESET_CMD 
+current_cmd_state.s_RESET_CMD 0 0 0 0 
+current_cmd_state.s_WAIT_COMMAND 0 0 1 1 
+current_cmd_state.s_WAIT_RESPONSE 0 1 0 1 
+current_cmd_state.s_UPDATE_AUX_SR 1 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|Altera_UP_SD_Card_Avalon_Interface:sd_card_interface|current_state
+Name current_state.s_WAIT_RELEASE current_state.s_WRITE_SECOND_WORD current_state.s_WRITE_SECOND_BYTE current_state.s_WR_READ_SECOND_WORD_DELAY current_state.s_WR_READ_SECOND_WORD current_state.s_WRITE_FIRST_WORD current_state.s_WRITE_FIRST_BYTE current_state.s_WR_READ_FIRST_WORD_DELAY current_state.s_WR_READ_FIRST_WORD current_state.s_RECEIVE_SECOND_WORD current_state.s_RECEIVE_FIRST_WORD current_state.s_READ_SECOND_WORD current_state.s_READ_FIRST_WORD current_state.s_WAIT_REQUEST current_state.s_RESET 
+current_state.s_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.s_WAIT_REQUEST 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.s_READ_FIRST_WORD 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.s_READ_SECOND_WORD 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.s_RECEIVE_FIRST_WORD 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.s_RECEIVE_SECOND_WORD 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.s_WR_READ_FIRST_WORD 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.s_WR_READ_FIRST_WORD_DELAY 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.s_WRITE_FIRST_BYTE 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.s_WRITE_FIRST_WORD 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.s_WR_READ_SECOND_WORD 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WR_READ_SECOND_WORD_DELAY 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WRITE_SECOND_BYTE 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WRITE_SECOND_WORD 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WAIT_RELEASE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|Altera_UP_SD_Card_Avalon_Interface:sd_card_interface|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Buffer:data_line|current_state
+Name current_state.s_WAIT_DEASSERT current_state.s_RECEIVING_STOP_BIT current_state.s_RECEIVING_DATA current_state.s_RECEIVING_LEADING_BITS current_state.s_WAIT_DATA_START current_state.s_WAIT_BUSY_END current_state.s_WAIT_BUSY current_state.s_SEND_STOP current_state.s_SEND_CRC current_state.s_SEND_DATA current_state.s_SEND_START_BIT current_state.s_WAIT_REQUEST current_state.s_RESET 
+current_state.s_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.s_WAIT_REQUEST 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.s_SEND_START_BIT 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.s_SEND_DATA 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.s_SEND_CRC 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.s_SEND_STOP 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.s_WAIT_BUSY 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.s_WAIT_BUSY_END 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.s_WAIT_DATA_START 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.s_RECEIVING_LEADING_BITS 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.s_RECEIVING_DATA 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.s_RECEIVING_STOP_BIT 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WAIT_DEASSERT 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|Altera_UP_SD_Card_Avalon_Interface:sd_card_interface|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Control_FSM:control_FSM|current_state
+Name current_state.s_PERIODIC_STATUS_CHECK current_state.s_WAIT_DEASSERT current_state.s_WAIT_FOR_CLOCK_EDGE_BEFORE_DISABLE current_state.s_WAIT_RESPONSE current_state.s_SEND_COMMAND current_state.s_GENERATE_COMMAND current_state.s_REACTIVATE_CLOCK current_state.s_AWAIT_USER_COMMAND current_state.s_TOGGLE_CLOCK_FREQUENCY current_state.s_GO_TO_NEXT_COMMAND current_state.s_WAIT_PREDEFINED_COMMAND_RESPONSE current_state.s_WAIT_PREDEFINED_COMMAND_TRANSMITTED current_state.s_GENERATE_PREDEFINED_COMMAND current_state.s_WAIT_74_CYCLES current_state.s_RESET 
+current_state.s_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.s_WAIT_74_CYCLES 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.s_GENERATE_PREDEFINED_COMMAND 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.s_WAIT_PREDEFINED_COMMAND_TRANSMITTED 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.s_WAIT_PREDEFINED_COMMAND_RESPONSE 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.s_GO_TO_NEXT_COMMAND 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.s_TOGGLE_CLOCK_FREQUENCY 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.s_AWAIT_USER_COMMAND 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.s_REACTIVATE_CLOCK 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.s_GENERATE_COMMAND 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.s_SEND_COMMAND 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WAIT_RESPONSE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WAIT_FOR_CLOCK_EDGE_BEFORE_DISABLE 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_WAIT_DEASSERT 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.s_PERIODIC_STATUS_CHECK 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|Altera_UP_SD_Card_Avalon_Interface:sd_card_interface|Altera_UP_SD_Card_Interface:SD_Card_Port|Altera_UP_SD_Card_Response_Receiver:response_receiver|current_state
+Name current_state.s_WAIT_BEGIN_DEASSERT current_state.s_WAIT_BUSY_END current_state.s_WAIT_BUSY current_state.s_WAIT_PROCESSING_DELAY current_state.s_WAIT_END current_state.s_WAIT_BEGIN 
+current_state.s_WAIT_BEGIN 0 0 0 0 0 0 
+current_state.s_WAIT_END 0 0 0 0 1 1 
+current_state.s_WAIT_PROCESSING_DELAY 0 0 0 1 0 1 
+current_state.s_WAIT_BUSY 0 0 1 0 0 1 
+current_state.s_WAIT_BUSY_END 0 1 0 0 0 1 
+current_state.s_WAIT_BEGIN_DEASSERT 1 0 0 0 0 1 
+
+State Machine - |audio_sd_play_mp3|nios:u0|nios_nios2_gen2:nios2_gen2|nios_nios2_gen2_cpu:cpu|nios_nios2_gen2_cpu_nios2_oci:the_nios_nios2_gen2_cpu_nios2_oci|nios_nios2_gen2_cpu_debug_slave_wrapper:the_nios_nios2_gen2_cpu_debug_slave_wrapper|nios_nios2_gen2_cpu_debug_slave_tck:the_nios_nios2_gen2_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Nov 07 17:53:17 2026
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : audio_sd_play_mp3
+Top-level Entity Name : audio_sd_play_mp3
+Family : Cyclone IV E
+Total logic elements : 8,482
+    Total combinational functions : 7,524
+    Dedicated logic registers : 3,121
+Total registers : 3121
+Total pins : 51
+Total virtual pins : 0
+Total memory bits : 302,080
+Embedded Multiplier 9-bit elements : 6
+Total PLLs : 2
